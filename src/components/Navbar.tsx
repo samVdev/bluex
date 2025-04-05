@@ -2,10 +2,13 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,12 +24,16 @@ const Navbar = () => {
   }, []);
 
   const menuItems = [
-    { name: 'Inicio', href: '#inicio' },
-    { name: 'Servicios', href: '#servicios' },
-    { name: 'Planes', href: '#planes' },
-    { name: 'Mantenimiento', href: '#mantenimiento' },
-    { name: 'Contacto', href: '#contacto' }
+    { name: 'Inicio', href: isHomePage ? '#inicio' : '/' },
+    { name: 'Nosotros', href: isHomePage ? '#nosotros' : '/#nosotros' },
+    { name: 'Servicios', href: isHomePage ? '#servicios' : '/#servicios' },
+    { name: 'Mantenimiento', href: isHomePage ? '#mantenimiento' : '/#mantenimiento' },
+    { name: 'Contacto', href: isHomePage ? '#contacto' : '/#contacto' }
   ];
+
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
 
   return (
     <nav 
@@ -36,9 +43,9 @@ const Navbar = () => {
     >
       <div className="container-custom flex items-center justify-between">
         <div className="flex items-center">
-          <a href="#inicio" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img src="/lovable-uploads/a2af1ca2-2586-4367-b0dc-d0a65a396950.png" alt="BlueX Agency" className="h-10" />
-          </a>
+          </Link>
         </div>
         
         {/* Desktop Menu */}
@@ -48,6 +55,7 @@ const Navbar = () => {
               key={item.name} 
               href={item.href} 
               className="btn-hover-effect text-bluex-gray font-medium hover:text-bluex-primary transition-colors"
+              onClick={handleLinkClick}
             >
               {item.name}
             </a>
@@ -77,14 +85,14 @@ const Navbar = () => {
                 key={item.name} 
                 href={item.href} 
                 className="text-bluex-gray font-medium py-2 hover:text-bluex-primary transition-colors"
-                onClick={() => setIsOpen(false)}
+                onClick={handleLinkClick}
               >
                 {item.name}
               </a>
             ))}
             <Button 
               className="bg-bluex-primary hover:bg-bluex-dark text-white w-full transition-colors"
-              onClick={() => setIsOpen(false)}
+              onClick={handleLinkClick}
             >
               Consulta Gratis
             </Button>

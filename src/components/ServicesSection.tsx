@@ -2,6 +2,7 @@
 import { Check, Layout, Globe, Code } from 'lucide-react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const ServicesSection = () => {
   const services = [
@@ -18,7 +19,8 @@ const ServicesSection = () => {
         'Enlace a redes sociales',
         'Entrega en 7 días'
       ],
-      popular: false
+      popular: false,
+      path: '/servicios/landing-page'
     },
     {
       icon: <Globe className="h-10 w-10 text-white" />,
@@ -34,7 +36,8 @@ const ServicesSection = () => {
         'Optimización SEO básica',
         'Entrega en 14 días'
       ],
-      popular: true
+      popular: true,
+      path: '/servicios/pagina-web'
     },
     {
       icon: <Code className="h-10 w-10 text-white" />,
@@ -50,7 +53,8 @@ const ServicesSection = () => {
         'Optimización de rendimiento',
         'Entrega según proyecto'
       ],
-      popular: false
+      popular: false,
+      path: '/servicios/desarrollo-a-medida'
     }
   ];
 
@@ -99,8 +103,8 @@ const ServicesSection = () => {
                 </ul>
               </CardContent>
               <CardFooter className="p-6 pt-0 bg-white">
-                <Button className={`w-full ${service.popular ? 'bg-bluex-primary hover:bg-bluex-dark' : 'bg-bluex-gray hover:bg-bluex-dark'} text-white`}>
-                  Solicitar Plan
+                <Button asChild className={`w-full ${service.popular ? 'bg-bluex-primary hover:bg-bluex-dark' : 'bg-bluex-gray hover:bg-bluex-dark'} text-white`}>
+                  <Link to={service.path}>Solicitar Plan</Link>
                 </Button>
               </CardFooter>
             </Card>
