@@ -23,8 +23,8 @@ const Navbar = () => {
   const menuItems = [
     { name: 'Inicio', href: '#inicio' },
     { name: 'Servicios', href: '#servicios' },
-    { name: 'Portafolio', href: '#portafolio' },
-    { name: 'Proceso', href: '#proceso' },
+    { name: 'Planes', href: '#planes' },
+    { name: 'Mantenimiento', href: '#mantenimiento' },
     { name: 'Contacto', href: '#contacto' }
   ];
 
@@ -36,7 +36,9 @@ const Navbar = () => {
     >
       <div className="container-custom flex items-center justify-between">
         <div className="flex items-center">
-          <a href="#inicio" className="text-2xl font-bold gradient-text">SIGMA</a>
+          <a href="#inicio" className="flex items-center">
+            <img src="/lovable-uploads/a2af1ca2-2586-4367-b0dc-d0a65a396950.png" alt="BlueX Agency" className="h-10" />
+          </a>
         </div>
         
         {/* Desktop Menu */}
@@ -45,12 +47,12 @@ const Navbar = () => {
             <a 
               key={item.name} 
               href={item.href} 
-              className="btn-hover-effect text-gray-800 font-medium"
+              className="btn-hover-effect text-bluex-gray font-medium hover:text-bluex-primary transition-colors"
             >
               {item.name}
             </a>
           ))}
-          <Button className="bg-sigma-purple hover:bg-sigma-purple/90 text-white">
+          <Button className="bg-bluex-primary hover:bg-bluex-dark text-white transition-colors">
             Consulta Gratis
           </Button>
         </div>
@@ -59,7 +61,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-800 hover:text-sigma-purple"
+            className="text-bluex-gray hover:text-bluex-primary"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -74,14 +76,14 @@ const Navbar = () => {
               <a 
                 key={item.name} 
                 href={item.href} 
-                className="text-gray-800 font-medium py-2"
+                className="text-bluex-gray font-medium py-2 hover:text-bluex-primary transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
               </a>
             ))}
             <Button 
-              className="bg-sigma-purple hover:bg-sigma-purple/90 text-white w-full"
+              className="bg-bluex-primary hover:bg-bluex-dark text-white w-full transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Consulta Gratis

@@ -14,10 +14,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 262 83% 63%;
+    --primary: 217 91% 60%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 199 95% 73%;
+    --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -31,7 +31,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 221.2 83.2% 53.3%;
 
     --radius: 0.5rem;
 
@@ -99,6 +99,7 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: 'Poppins', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -123,15 +124,11 @@
 
   .btn-hover-effect::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-0 h-[2px] bg-sigma-purple transition-all duration-300;
+    @apply absolute bottom-0 left-0 w-0 h-[2px] bg-bluex-primary transition-all duration-300;
   }
 
   .btn-hover-effect:hover::after {
     @apply w-full;
-  }
-
-  .gradient-text {
-    @apply bg-gradient-to-r from-sigma-purple to-sigma-blue bg-clip-text text-transparent;
   }
 }
 
