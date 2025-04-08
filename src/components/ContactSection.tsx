@@ -128,43 +128,15 @@ const ContactSection = () => {
                   <Phone className="h-5 w-5 text-sigma-purple mt-0.5" />
                   <div>
                     <p className="text-sm font-medium text-gray-800">Teléfono</p>
-                    <p className="text-gray-600">+1 (234) 567-8901</p>
+                    <p className="text-gray-600">04129856652</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Mail className="h-5 w-5 text-sigma-purple mt-0.5" />
                   <div>
                     <p className="text-sm font-medium text-gray-800">Email</p>
-                    <p className="text-gray-600">contacto@agenciasigma.com</p>
+                    <p className="text-gray-600">contacto@cual.com</p>
                   </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-sigma-purple mt-0.5" />
-                  <div>
-                    <p className="text-sm font-medium text-gray-800">Ubicación</p>
-                    <p className="text-gray-600">
-                      Calle Principal #123<br />
-                      Ciudad, País CP 12345
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-sm p-6">
-              <h3 className="text-xl font-semibold mb-4">Horario de atención</h3>
-              <div className="space-y-2">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Lunes a Viernes</span>
-                  <span className="font-medium">9:00 AM - 6:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Sábado</span>
-                  <span className="font-medium">10:00 AM - 2:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Domingo</span>
-                  <span className="font-medium">Cerrado</span>
                 </div>
               </div>
             </div>
