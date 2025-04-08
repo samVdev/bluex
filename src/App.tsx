@@ -23,7 +23,6 @@ const App = () => (
           <Route path="/servicios/landing-page" element={<LandingPageService />} />
           <Route path="/servicios/pagina-web" element={<WebsiteService />} />
           <Route path="/servicios/desarrollo-a-medida" element={<CustomDevelopmentService />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
