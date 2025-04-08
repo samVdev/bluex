@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <h3 className="text-xl font-bold mb-4 flex items-center">
-              <img src="/lovable-uploads/a2af1ca2-2586-4367-b0dc-d0a65a396950.png" alt="BlueX Agency" className="h-8 mr-2" />
+              <img src="/logo.png" alt="BlueX Agency" className="h-8 mr-2" />
               BLUEX
             </h3>
             <p className="text-gray-300 mb-4">
