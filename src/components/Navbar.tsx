@@ -43,9 +43,9 @@ const Navbar = () => {
     >
       <div className="container-custom flex items-center justify-between">
         <div className="flex items-center">
-          <Link to="/" className="flex items-center">
+          <a href="/#" className="flex items-center">
             <img src="/logo.png" alt="BlueX Agency" className="h-10" />
-          </Link>
+          </a>
         </div>
         
         {/* Desktop Menu */}

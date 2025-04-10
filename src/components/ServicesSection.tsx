@@ -10,7 +10,7 @@ const ServicesSection = () => {
       icon: <Layout className="h-10 w-10 text-white" />,
       title: 'Landing Page',
       description: 'Una página profesional enfocada en conversión para promocionar tu producto o servicio.',
-      price: 'Desde $299',
+      price: '$500',
       features: [
         'Diseño atractivo y profesional',
         'Optimizada para conversiones',
@@ -26,7 +26,7 @@ const ServicesSection = () => {
       icon: <Globe className="h-10 w-10 text-white" />,
       title: 'Página Web',
       description: 'Sitio web completo con múltiples páginas para establecer una presencia digital sólida.',
-      price: 'Desde $599',
+      price: '$700',
       features: [
         'Hasta 5 páginas interiores',
         'Blog integrado',

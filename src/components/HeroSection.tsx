@@ -21,36 +21,21 @@ const HeroSection = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-bluex-primary hover:bg-bluex-dark text-white px-8 py-6 text-lg transition-all duration-300 transform hover:translate-y-[-2px]">
+              <Button onClick={() => location.href = location.origin + '#contacto'} className="bg-bluex-primary hover:bg-bluex-dark text-white px-8 py-6 text-lg transition-all duration-300 transform hover:translate-y-[-2px]">
                 Solicitar Cotización
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" className="border-bluex-primary text-bluex-primary hover:bg-blue-50 px-8 py-6 text-lg transition-all duration-300 transform hover:translate-y-[-2px]">
+              <Button onClick={() => location.href = location.origin + '#portafolio'} variant="outline" className="border-bluex-primary text-bluex-primary hover:bg-blue-50 px-8 py-6 text-lg transition-all duration-300 transform hover:translate-y-[-2px]">
                 Ver Portafolio
               </Button>
-            </div>
-            
-            <div className="pt-6 border-t border-gray-200">
-              <p className="text-sm text-bluex-gray mb-3">Empresas que confían en nosotros:</p>
-              <div className="flex flex-wrap gap-8">
-                <div className="h-8 w-16 bg-gray-200 rounded opacity-50"></div>
-                <div className="h-8 w-16 bg-gray-200 rounded opacity-50"></div>
-                <div className="h-8 w-16 bg-gray-200 rounded opacity-50"></div>
-                <div className="h-8 w-16 bg-gray-200 rounded opacity-50"></div>
-              </div>
             </div>
           </div>
           
           <div className="relative animate-slide-in-right">
             <div className="bg-gradient-to-br from-bluex-primary/20 to-bluex-light/20 rounded-xl p-4 md:p-8">
-              <div className="rounded-lg overflow-hidden shadow-2xl border border-white/20 bg-white">
-                <div className="h-64 md:h-80 bg-blue-100"></div>
-              </div>
-            </div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-bluex-primary rounded-full flex items-center justify-center text-white font-bold animate-float shadow-lg">
-              <div className="text-center">
-                <div className="text-2xl">100%</div>
-                <div className="text-xs">Responsivo</div>
+              <div className="rounded-lg relative shadow-2xl">
+              <div className="h-64 md:h-80 bg-transparent"/>
+              <img src='/home.jpg' className="h-64 md:h-80 bg-blue-100 object-cover -rotate-6 top-0 rounded-lg absolute"/>
               </div>
             </div>
           </div>

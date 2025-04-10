@@ -99,7 +99,7 @@ const MaintenanceSection = () => {
                 </ul>
               </CardContent>
               <CardFooter className="p-6 pt-0 bg-white">
-                <Button className={`w-full ${plan.popular ? 'bg-bluex-primary hover:bg-bluex-dark' : 'bg-bluex-gray hover:bg-bluex-dark'} text-white`}>
+                <Button onClick={() => location.href = location.origin + '#contacto'} className={`w-full ${plan.popular ? 'bg-bluex-primary hover:bg-bluex-dark' : 'bg-bluex-gray hover:bg-bluex-dark'} text-white`}>
                   Contratar Plan
                 </Button>
               </CardFooter>
