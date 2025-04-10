@@ -64,9 +64,9 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				bluex: {
-					'light': '#6BA5D7',
-					'primary': '#3B82F6',
-					'dark': '#1E3A8A',
+					'light': '#00B5D7',
+					'primary': '#0078B6',
+					'dark': '#03045F',
 					'gray': '#64748B',
 					'light-gray': '#F1F5F9'
 				}
